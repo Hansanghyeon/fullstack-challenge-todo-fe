@@ -1,0 +1,16 @@
+/* 
+react-toastify스타일 오버라이딩
+*/
+body {
+  --toastify-toast-width: auto;
+}
+.Toastify__toast-body {
+  @apply p-0;
+}
+.Toastify__toast-container {
+  @apply space-y-2;
+}
+.Toastify__toast-icon {
+  width: auto;
+  margin-inline-end: 8px;
+}
