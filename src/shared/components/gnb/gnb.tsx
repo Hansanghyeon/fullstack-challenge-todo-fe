@@ -2,7 +2,6 @@ import React from 'react'
 import { IoPerson } from 'react-icons/io5'
 import { Link } from '@tanstack/react-router'
 import Headroom from 'headroom.js'
-import { LuMountain } from 'react-icons/lu'
 import {
   NavigationMenu,
   NavigationMenuLink,
@@ -23,6 +22,7 @@ import {
 import './gnb.css'
 import { Button } from '../ui/button'
 import { useAuth } from '~/shared/hooks/use-auth'
+import { LuListTodo } from 'react-icons/lu'
 
 export function GNB() {
   const auth = useAuth().value
@@ -42,7 +42,7 @@ export function GNB() {
         className="flex h-[var(--gnb-h)] w-full shrink-0 items-center px-4 pr-[var(--fix-scrollbar-size)] md:px-6"
       >
         <Link to="/" className="text-8 mr-6 flex items-center">
-          <LuMountain className="h-auto w-8" />
+          <LuListTodo className="h-auto w-8" />
           <span className="sr-only">fullstack-challenge-template-vite</span>
         </Link>
         <nav className="ml-auto flex items-center gap-4 sm:gap-6">
@@ -53,31 +53,7 @@ export function GNB() {
                   to="/"
                   className="bg-background hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                 >
-                  Home
-                </Link>
-              </NavigationMenuLink>
-              <NavigationMenuLink asChild>
-                <Link
-                  to="/"
-                  className="bg-background hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  About
-                </Link>
-              </NavigationMenuLink>
-              <NavigationMenuLink asChild>
-                <Link
-                  to="/"
-                  className="bg-background hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  Services
-                </Link>
-              </NavigationMenuLink>
-              <NavigationMenuLink asChild>
-                <Link
-                  to="/account"
-                  className="bg-background hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  account
+                  dashboard
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuList>
