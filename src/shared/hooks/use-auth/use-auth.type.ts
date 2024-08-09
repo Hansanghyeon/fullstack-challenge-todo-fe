@@ -1,9 +1,9 @@
 export interface TAuthBase {
-  accessToken: string
+  accessToken: string;
 }
 
 export interface TAuth {
-  value?: TAuthBase
-  signout: () => void
-  signin: (auth: TAuthBase) => void
+  value?: TAuthBase;
+  signout: () => void;
+  signin: (auth: TAuthBase) => void;
 }

@@ -9,7 +9,7 @@ export class SessionStorageManager {
     const value = sessionStorage.getItem(key)
     try {
       return decryptData(value)
-    } catch (e) {
+    } catch (_error) {
       return value
     }
   }

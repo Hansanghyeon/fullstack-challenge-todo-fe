@@ -1,11 +1,11 @@
 import 'react-toastify/dist/ReactToastify.min.css'
 import './toast-container.css'
+import { cva }                                       from 'class-variance-authority'
+import { IoClose }                                   from 'react-icons/io5'
+import { MdError }                                   from 'react-icons/md'
+import { PiCheckCircleDuotone }                      from 'react-icons/pi'
 import { ToastContainer as ToastContainerPrimitive } from 'react-toastify'
-import { cva } from 'class-variance-authority'
-import { match } from 'ts-pattern'
-import { PiCheckCircleDuotone } from 'react-icons/pi'
-import { IoClose } from 'react-icons/io5'
-import { MdError } from 'react-icons/md'
+import { match }                                     from 'ts-pattern'
 
 const stateMap = {
   default: 'default',
@@ -17,13 +17,13 @@ const stateMap = {
  * 우선 당장 필요한 UI만 정의했습니다.
  */
 const toastVariants = cva(
-  'flex items-center justify-content rounded-full text-center break-keep w-fit mx-auto',
+  'justify-content mx-auto flex w-fit items-center break-keep rounded-full text-center',
   {
     variants: {
       size: {
         [stateMap.default]: 'px-3 py-2',
-        [stateMap.success]: 'pl-3 pr-4 py-2',
-        [stateMap.critical]: 'pl-3 pr-4 py-2',
+        [stateMap.success]: 'py-2 pl-3 pr-4',
+        [stateMap.critical]: 'py-2 pl-3 pr-4',
       },
       state: {
         [stateMap.default]: '',

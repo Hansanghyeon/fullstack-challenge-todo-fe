@@ -1,8 +1,8 @@
-import { pipe, flow } from 'fp-ts/function'
-import * as R from 'fp-ts/Record'
-import * as O from 'fp-ts/Option'
+import { pipe, flow }                 from 'fp-ts/function'
+import * as O                         from 'fp-ts/Option'
+import * as R                         from 'fp-ts/Record'
 import { ControllerFieldState, Mode } from 'react-hook-form'
-import { match } from 'ts-pattern'
+import { match }                      from 'ts-pattern'
 
 /**
  * @description clay isValid를 react-hook-form controller field state 에 맞게 값을 구하는 함수

@@ -1,10 +1,12 @@
 import { AxiosResponse } from 'axios'
-import { ApiClient } from '~/shared/api'
+
 import {
   type TPostResSignInDto,
   type TPostPayloadSignInDto,
   postResSignInDto,
 } from '.'
+
+import { ApiClient } from '~/shared/api'
 
 const axios = ApiClient()
 

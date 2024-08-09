@@ -1,11 +1,12 @@
 import { createRootRouteWithContext } from '@tanstack/react-router'
-import { pipe } from 'fp-ts/function'
-import { Outlet } from '@tanstack/react-router'
-import { AppProvider } from '~/app/provider/app-provider'
-import { FNB } from '~/shared/components/fnb'
-import { GNB } from '~/shared/components/gnb'
-import { TAuth } from '~/shared/hooks/use-auth'
-import { ToastContainer } from '~/shared/components/toast-container/toast-container'
+import { Outlet }                     from '@tanstack/react-router'
+import { pipe }                       from 'fp-ts/function'
+
+import { AppProvider }                from '~/app/provider/app-provider'
+import { FNB }                        from '~/shared/components/fnb'
+import { GNB }                        from '~/shared/components/gnb'
+import { ToastContainer }             from '~/shared/components/toast-container/toast-container'
+import { TAuth }                      from '~/shared/hooks/use-auth'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
 }
 
 interface MyRouterContext {
-  auth: TAuth
+  auth: TAuth;
 }
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({

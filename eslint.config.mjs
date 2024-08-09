@@ -1,9 +1,12 @@
 import hyeonEslintConfig from '@hyeon/eslint-config'
+import tailwind          from "eslint-plugin-tailwindcss"
 
 export default [
-  ...hyeonEslintConfig.recommended,
+  ...hyeonEslintConfig.base,
+  ...hyeonEslintConfig.react,
   ...hyeonEslintConfig.typescript,
-  ...hyeonEslintConfig.prettier,
+  ...hyeonEslintConfig.plus, // optional
+  ...tailwind.configs["flat/recommended"],
   {
     rules: {
       camelcase: 'off',
@@ -12,8 +15,13 @@ export default [
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          varsIgnorePattern: 'flow',
-          argsIgnorePattern: '^_',
+          args: "all",
+          argsIgnorePattern: "^_",
+          caughtErrors: "all",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true
         },
       ],
     },

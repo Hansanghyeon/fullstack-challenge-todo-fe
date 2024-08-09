@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-import { cn } from '~/shared/utils'
+import { cn }     from '~/shared/utils'
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  isValid?: boolean
+  isValid?: boolean;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(

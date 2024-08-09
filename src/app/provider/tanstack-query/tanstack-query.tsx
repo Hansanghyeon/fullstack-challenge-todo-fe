@@ -3,7 +3,8 @@ import {
   QueryClientProvider as OriginalQueryClientProvider,
   MutationCache,
 } from '@tanstack/react-query'
-import React from 'react'
+import React                  from 'react'
+
 import { TanstackQueryLabel } from './tanstack-query-label'
 
 const queryClient = new QueryClient({

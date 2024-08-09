@@ -1,9 +1,12 @@
-import React from 'react'
-import { LuTrash } from 'react-icons/lu'
-import { useForm } from 'react-hook-form'
-import { FaFilter } from 'react-icons/fa6'
-import { Button } from '~/shared/components/ui/button'
+import { createFileRoute }   from '@tanstack/react-router'
+import React                 from 'react'
+import { useForm }           from 'react-hook-form'
+import { FaFilter }          from 'react-icons/fa6'
+import { LuTrash }           from 'react-icons/lu'
+
+import { Button }            from '~/shared/components/ui/button'
 import { Card, CardContent } from '~/shared/components/ui/card'
+import { Checkbox }          from '~/shared/components/ui/checkbox'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,9 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '~/shared/components/ui/dropdown-menu'
 import { Form, FormField } from '~/shared/components/ui/form'
-import { cn } from '~/shared/utils'
-import { Checkbox } from '~/shared/components/ui/checkbox'
-import { createFileRoute } from '@tanstack/react-router'
+import { cn }              from '~/shared/utils'
 
 export const Route = createFileRoute('/_authenticated/dashboard')({
   component: Page,

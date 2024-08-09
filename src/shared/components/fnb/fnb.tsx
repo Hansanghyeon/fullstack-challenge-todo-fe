@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router'
+import { Link }     from '@tanstack/react-router'
 import { FaGithub } from 'react-icons/fa'
 
 export function FNB() {
@@ -42,7 +42,7 @@ export function FNB() {
               to="/"
               className="text-muted-foreground hover:text-foreground"
             >
-              <FaGithub className="h-5 w-5" />
+              <FaGithub className="size-5" />
             </Link>
           </div>
         </div>

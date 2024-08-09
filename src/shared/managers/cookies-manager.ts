@@ -1,6 +1,7 @@
+import { pipe }                     from 'fp-ts/function'
+import * as math                    from 'mathjs'
+
 import { decryptData, encryptData } from './helpers-crypt'
-import * as math from 'mathjs'
-import { pipe } from 'fp-ts/function'
 
 export class CookiesManager {
   //used to:

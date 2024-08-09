@@ -1,6 +1,8 @@
-import React from 'react'
+import React                   from 'react'
+
+import { TAuth, TAuthBase }    from './use-auth.type'
+
 import { LocalStorageManager } from '~/shared/managers'
-import { TAuth, TAuthBase } from './use-auth.type'
 
 export function useAuth(): TAuth {
   const state = React.useState<TAuthBase | undefined>(

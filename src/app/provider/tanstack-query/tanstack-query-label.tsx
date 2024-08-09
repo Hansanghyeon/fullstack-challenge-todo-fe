@@ -1,4 +1,5 @@
-import React from 'react'
+import React  from 'react'
+
 import { cn } from '~/shared/utils'
 
 /**
@@ -39,8 +40,8 @@ function ClosedWrapper({
   onClosed,
   isOpen,
 }: {
-  onClosed: () => void
-  isOpen: boolean
+  onClosed: () => void;
+  isOpen: boolean;
 }) {
   React.useLayoutEffect(() => {
     const btn = document.querySelector(
@@ -84,7 +85,7 @@ export function TanstackQueryLabel() {
             isOpen && 'pointer-events-none opacity-0',
           )}
         >
-          <div className="font-pretendard whitespace-nowrap bg-gradient-to-r from-[#dd524b] to-[#e9a03b] bg-clip-text text-[calc(var(--tsrd-font-size)*0.75)] font-semibold leading-none text-transparent">
+          <div className="whitespace-nowrap bg-gradient-to-r from-[#dd524b] to-[#e9a03b] bg-clip-text font-pretendard text-[calc(var(--tsrd-font-size)*0.75)] font-semibold leading-none text-transparent">
             TanStack Query
           </div>
         </button>
@@ -101,3 +102,5 @@ export function TanstackQueryLabel() {
     </>
   )
 }
+
+// production에서는 devtools를 불러오지 않음

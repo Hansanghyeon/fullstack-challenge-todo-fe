@@ -27,8 +27,8 @@ function ClosedWrapper({
   onClosed,
   isOpen,
 }: {
-  onClosed: () => void
-  isOpen: boolean
+  onClosed: () => void;
+  isOpen: boolean;
 }) {
   React.useLayoutEffect(() => {
     const btn = document.querySelector(
@@ -71,7 +71,7 @@ export function TanstackQueryLabel() {
           //   isOpen && 'opacity-0 pointer-events-none',
           // )}
         >
-          <div className="font-pretendard whitespace-nowrap bg-gradient-to-r from-[#dd524b] to-[#e9a03b] bg-clip-text text-[calc(var(--tsrd-font-size)*0.75)] font-semibold leading-none text-transparent">
+          <div className="whitespace-nowrap bg-gradient-to-r from-[#dd524b] to-[#e9a03b] bg-clip-text font-pretendard text-[calc(var(--tsrd-font-size)*0.75)] font-semibold leading-none text-transparent">
             React Query v5
           </div>
         </button>
