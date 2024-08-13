@@ -2,7 +2,6 @@ import { pipe }                   from 'fp-ts/function'
 import React                      from 'react'
 
 import { JotaiProvider }          from './jotai'
-import { QueryClientProvider }    from './tanstack-query'
 import { TanstackRouterProvider } from './tanstack-router'
 
 // 각 Provider를 래핑하는 함수
@@ -17,7 +16,6 @@ const AppProvider =
         pipe(
           children,
           wrap(JotaiProvider),
-          wrap(QueryClientProvider),
           wrap(TanstackRouterProvider),
         )
       return (

@@ -4,14 +4,16 @@ import ReactDOM                         from 'react-dom/client'
 import './style.css'
 
 // Import the generated route tree
-import { routeTree } from './routeTree.gen'
-import { useAuth }   from './shared/hooks/use-auth'
+import { QueryClientProvider, queryClient } from './app/provider/tanstack-query'
+import { routeTree }                        from './routeTree.gen'
+import { useAuth }                          from './shared/hooks/use-auth'
 
 // Create a new router instance
 const router = createRouter({
   routeTree,
   context: {
     auth: undefined!,
+    queryClient,
   },
 })
 
@@ -33,7 +35,9 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <App />
+      <QueryClientProvider>
+        <App />
+      </QueryClientProvider>
     </StrictMode>,
   )
 }

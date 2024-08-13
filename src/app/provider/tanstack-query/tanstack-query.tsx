@@ -7,7 +7,7 @@ import React                  from 'react'
 
 import { TanstackQueryLabel } from './tanstack-query-label'
 
-const queryClient = new QueryClient({
+export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false, // default: true

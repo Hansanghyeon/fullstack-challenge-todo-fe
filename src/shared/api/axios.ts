@@ -1,10 +1,27 @@
-import axios from 'axios'
+import axios                   from 'axios'
+
+import { LocalStorageManager } from '../managers'
 
 export function ApiClient() {
-  return axios.create({
+  const instance = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
     headers: {
       'Content-Type': 'application/json',
     },
   })
+
+
+  instance.interceptors.request.use(async (request) => {
+    // 로그인 하는 요청에는 accessToken을 가져오지 않는다.
+    if (request.url === '/auth/sign-in') {
+      return request
+    }
+
+    const token = LocalStorageManager.getItem('auth')
+
+    request.headers.Authorization = `Bearer ${token.accessToken}`
+    return request
+  })
+
+  return instance
 }
