@@ -1,16 +1,16 @@
-import { zodResolver }                            from '@hookform/resolvers/zod'
-import { useMutation }                            from '@tanstack/react-query'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useMutation } from '@tanstack/react-query'
 import { createLazyFileRoute, Link, useNavigate } from '@tanstack/react-router'
-import { pipe }                                   from 'fp-ts/function'
-import * as R                                     from 'fp-ts/Record'
-import { FormProvider, useForm }                  from 'react-hook-form'
-import { toast }                                  from 'react-toastify'
+import { pipe } from 'fp-ts/function'
+import * as R from 'fp-ts/Record'
+import { FormProvider, useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 
 import {
   postPayloadSignUpRdo,
   postSignUp,
   TPostPayloadSignUpRdo,
-} from '~/api/sign-up'
+} from '~/api/auth/sign-up'
 import { IsValid }  from '~/shared/calc/is-valid'
 import { Button }   from '~/shared/components/ui/button'
 import { Checkbox } from '~/shared/components/ui/checkbox'

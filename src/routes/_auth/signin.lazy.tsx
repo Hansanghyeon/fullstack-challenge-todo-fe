@@ -4,7 +4,7 @@ import { createLazyFileRoute, Link, useNavigate } from '@tanstack/react-router'
 import { FormProvider, useForm }                  from 'react-hook-form'
 import { toast }                                  from 'react-toastify'
 
-import { postPayloadSignInDto, postSignIn }       from '~/api/sign-in'
+import { postPayloadSignInDto, postSignIn }       from '~/api/auth/sign-in'
 import { IsValid }                                from '~/shared/calc/is-valid'
 import { Button }                                 from '~/shared/components/ui/button'
 import {
