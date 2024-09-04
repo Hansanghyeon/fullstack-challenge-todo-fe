@@ -11,7 +11,6 @@ const axios = ApiClient()
 
 /**
  * @API문서
- * @description {__kebabCaseName__}
  */
 export function getTasks() {
   return async function (params: TGetPayloadTasksDto) {

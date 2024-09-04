@@ -436,16 +436,15 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.3.0.tgz#6d86b8cb322660f03d3f0aa94b99bdd8e172d570"
   integrity sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==
 
-"@hyeon/eslint-config@^6.1.16":
-  version "6.1.16"
-  resolved "https://registry.yarnpkg.com/@hyeon/eslint-config/-/eslint-config-6.1.16.tgz#d976669c0d12a86dc9ba3f7b688714ce1b36725e"
-  integrity sha512-nyStedh+rE1CWqY6+Wq8yG/DO31NLksQWMaOHRx1VXI5DSweRUqzPlWgSpnGczqTH9ve4i72m8PBbPiNWx8L3A==
+"@hyeon/eslint-config@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@hyeon/eslint-config/-/eslint-config-6.2.1.tgz#af93a4dde81879b28c67d1510713b399c1ae6353"
+  integrity sha512-nzWGq+CgTIrlPL8U+KIyK5zwS1z04DmsBOM9ObvJpKCJf23nVzKo3FHGJ112J6joxmsR2B+9suW8jwXogx36PQ==
   dependencies:
     "@stylistic/eslint-plugin-js" "^2.6.1"
     "@stylistic/eslint-plugin-jsx" "^2.6.1"
     "@stylistic/eslint-plugin-ts" "^2.6.1"
     "@typescript-eslint/parser" "^8.0.0"
-    eslint-plugin-arca "^0.16.0"
     eslint-plugin-import "^2.29.1"
     eslint-plugin-react "^7.34.3"
     typescript-eslint "^8.0.0"
@@ -2080,11 +2079,6 @@ eslint-module-utils@^2.8.0:
   integrity sha512-rXDXR3h7cs7dy9RNpUlQf80nX31XWJEyGq1tRMo+6GsO5VmTe4UTwtmonAD4ZkAsrfMVDA2wlGJ3790Ys+D49Q==
   dependencies:
     debug "^3.2.7"
-
-eslint-plugin-arca@^0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-arca/-/eslint-plugin-arca-0.16.0.tgz#9e5dae90cbe7af9d2ad57491e5d045b3f3ec442b"
-  integrity sha512-Gx0Rw06LfhF0mRXHiUmG+LxyRy4dYLGT49FiAp4yhFgGYF2Tq94CuWFjbwdenp8vw36K2WzbMPObU9FstjwfCQ==
 
 eslint-plugin-import@^2.29.1:
   version "2.29.1"
