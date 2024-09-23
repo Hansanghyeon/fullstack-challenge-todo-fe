@@ -10,10 +10,16 @@
   --gnb-h: 80px;
   --head-area: 60px;
   --footer-area: 200px;
+  --space: 80px;
 }
 
 body {
   -webkit-overflow-scrolling: touch;
+}
+
+main {
+  @apply grid grid-rows-[1fr,auto] gap-y-[var(--space)];
+  min-height: calc(100dvh - var(--gnb-h, 0));
 }
 
 body[data-scroll-locked][data-scroll-locked] {

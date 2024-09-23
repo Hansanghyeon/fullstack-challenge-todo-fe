@@ -23,10 +23,10 @@ export default {
     },
     extend: {
       padding: {
-        space: '80px',
+        space: 'var(--space, 80px)',
       },
       margin: {
-        space: '80px',
+        space: 'var(--space, 80px)',
       },
       keyframes: {
         'accordion-down': {
@@ -43,9 +43,6 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       fontFamily: {
-        pretendard: '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif'.split(
-          ', ',
-        ),
         sans: '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif'.split(
           ', ',
         ),

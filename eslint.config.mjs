@@ -5,7 +5,6 @@ export default [
   ...hyeonEslintConfig.base,
   ...hyeonEslintConfig.react,
   ...hyeonEslintConfig.typescript,
-  ...hyeonEslintConfig.plus, // optional
   ...tailwind.configs["flat/recommended"],
   {
     rules: {
@@ -15,13 +14,14 @@ export default [
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          args: "all",
-          argsIgnorePattern: "^_",
-          caughtErrors: "all",
-          caughtErrorsIgnorePattern: "^_",
-          destructuredArrayIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
-          ignoreRestSiblings: true
+          vars: 'all',
+          varsIgnorePattern: '^_.*$|^_$|^P$|^flow$',
+          args: 'all',
+          argsIgnorePattern: '^_.*$|^_$|^P$|^flow$',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_.*$|^_$|^P$|^flow$',
+          destructuredArrayIgnorePattern: '^_.*$|^_$|^P$|^flow$',
+          ignoreRestSiblings: true,
         },
       ],
     },
