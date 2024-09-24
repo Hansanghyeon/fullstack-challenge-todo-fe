@@ -1,3 +1,4 @@
+
 import { z }       from 'zod'
 
 import { 상수_할일상태 } from '../@x/할일상태'
@@ -10,3 +11,6 @@ const taskDto = z.object({
 })
 export const getResTasksDto = z.array(taskDto)
 export const getPayloadTasksDto = z.any()
+
+export const postResTasksDto = z.any()
+export const postPayloadTasksDto = z.any()
