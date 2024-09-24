@@ -22,5 +22,21 @@ export function ApiClient() {
     return request
   })
 
+  instance.interceptors.response.use(
+    (response) => {
+      return response
+    },
+    (error) => {
+    // 401 Unauthorized
+    // ====================================== 401 조회 에러 처리 ======================================
+      if (error.response?.status === 401) {
+        // TODO: renew token하거나 token을 삭제해야한다.
+        AuthManager.clear()
+      }
+
+      throw error
+    }
+  )
+
   return instance
 }
