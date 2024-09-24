@@ -11,13 +11,11 @@ import { AuthManager } from '~/shared/managers/auth'
 
 function App() {
   return (
-    <>
+    <main className="mt-[var(--gnb-h)] pt-[var(--head-area)]">
       <GNB />
-      <div className="mt-[var(--gnb-h)]">
-        <Outlet />
-      </div>
+      <Outlet />
       <FNB />
-    </>
+    </main>
   )
 }
 
