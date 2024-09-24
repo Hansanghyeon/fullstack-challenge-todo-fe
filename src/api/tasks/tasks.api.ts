@@ -34,7 +34,7 @@ export function postTasks() {
     type R = typeof body
     type T = TPostResTasksDto
     const result = await axios
-      .post<T, AxiosResponse<T>, R>(`TGetResTasksDto`, body)
+      .post<T, AxiosResponse<T>, R>(`/tasks`, body)
       .then(res => res.data)
 
     try {

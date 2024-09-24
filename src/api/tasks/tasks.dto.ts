@@ -4,13 +4,15 @@ import { z }       from 'zod'
 import { 상수_할일상태 } from '../@x/할일상태'
 
 const taskDto = z.object({
-  id: z.number(),
-  title: z.string(),
+  title: z.string().min(2),
   description: z.string(),
-  status: z.nativeEnum(상수_할일상태),
 })
-export const getResTasksDto = z.array(taskDto)
+
+export const getResTasksDto = z.array(taskDto.extend({
+  id: z.number(),
+  status: z.nativeEnum(상수_할일상태),
+}))
 export const getPayloadTasksDto = z.any()
 
 export const postResTasksDto = z.any()
-export const postPayloadTasksDto = z.any()
+export const postPayloadTasksDto = taskDto
