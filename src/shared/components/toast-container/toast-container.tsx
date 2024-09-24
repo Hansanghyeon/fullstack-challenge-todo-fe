@@ -1,11 +1,11 @@
 import 'react-toastify/dist/ReactToastify.min.css'
 import './toast-container.css'
-import { cva }                                       from 'class-variance-authority'
-import { IoClose }                                   from 'react-icons/io5'
-import { MdError }                                   from 'react-icons/md'
-import { PiCheckCircleDuotone }                      from 'react-icons/pi'
+import { cva } from 'class-variance-authority'
+import { IoClose } from 'react-icons/io5'
+import { MdError } from 'react-icons/md'
+import { PiCheckCircleDuotone } from 'react-icons/pi'
 import { ToastContainer as ToastContainerPrimitive } from 'react-toastify'
-import { match }                                     from 'ts-pattern'
+import { match } from 'ts-pattern'
 
 const stateMap = {
   default: 'default',
@@ -17,7 +17,7 @@ const stateMap = {
  * 우선 당장 필요한 UI만 정의했습니다.
  */
 const toastVariants = cva(
-  'justify-content mx-auto flex w-fit items-center break-keep rounded-full text-center',
+  'mx-auto flex w-fit items-center break-keep rounded-full text-center',
   {
     variants: {
       size: {
@@ -68,7 +68,7 @@ export function ToastContainer() {
             <button
               type="button"
               onClick={context?.closeToast}
-              className="ml-clay-4"
+              className="ml-4"
             >
               <IoClose />
             </button>

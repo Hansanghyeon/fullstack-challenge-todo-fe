@@ -6,6 +6,7 @@ import './style.css'
 // Import the generated route tree
 import { QueryClientProvider, queryClient } from './app/provider/tanstack-query'
 import { routeTree } from './routeTree.gen'
+import { ToastContainer } from './shared/components/toast-container/toast-container'
 import { AuthManager } from './shared/managers/auth'
 
 
@@ -38,6 +39,7 @@ if (!rootElement.innerHTML) {
     <StrictMode>
       <QueryClientProvider>
         <App />
+        <ToastContainer />
       </QueryClientProvider>
     </StrictMode>,
   )
