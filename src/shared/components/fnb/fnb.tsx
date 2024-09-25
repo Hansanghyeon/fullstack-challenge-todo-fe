@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa'
 
 export function FNB() {
   return (
-    <footer className="mt-space w-full bg-gray-200 p-6 md:py-12">
+    <footer className="mt-space w-full bg-gray-200 py-6 md:py-12">
       <div className="container grid max-w-7xl grid-cols-2 gap-8 text-sm sm:grid-cols-3 md:grid-cols-5">
         <div className="grid gap-1">
           <h3 className="font-semibold">Company</h3>
