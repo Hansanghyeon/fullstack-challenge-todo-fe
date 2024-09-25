@@ -1,3 +1,4 @@
+
 import { AxiosResponse } from 'axios'
 
 import {
@@ -7,6 +8,8 @@ import {
   postResTasksDto,
   type TPostResTasksDto,
   type TPostPayloadTasksDto,
+  deleteResTasksDto,
+  type TDeleteResTasksDto,
 } from '.'
 
 import { ApiClient } from '~/shared/api'
@@ -41,6 +44,27 @@ export function postTasks() {
       postResTasksDto.parse(result.data)
     } catch (error) {
       console.error(error)
+    }
+    return result
+  }
+}
+
+
+/**
+ * @API문서
+ * @description tasks
+ */
+export function deleteTasks({ id }: { id: number }) {
+  return async function() {
+    type T = TDeleteResTasksDto
+    const result = await axios
+      .delete<T, AxiosResponse<T>>(`/tasks/${id}`)
+      .then(res => res.data)
+  
+    try {
+      deleteResTasksDto.parse(result.data)
+    } catch(error) {
+      console.log(error)
     }
     return result
   }
