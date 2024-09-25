@@ -6,15 +6,14 @@ import { pipe }              from 'fp-ts/function'
 import React                 from 'react'
 import { useForm }           from 'react-hook-form'
 import { FaFilter }          from 'react-icons/fa6'
-import { LuTrash }           from 'react-icons/lu'
 import { toast } from 'react-toastify'
 
-import { 상수_할일상태 }           from '~/api/@x/할일상태'
+import { TaskItem } from './tasks/-presentation/task-item'
+
 import { postPayloadTasksRdo, postTasks, tasksQueryOptions, TPostPayloadTasksRdo } from '~/api/tasks'
 import { queryClient } from '~/app/provider/tanstack-query'
 import { Button }            from '~/shared/components/ui/button'
 import { Card, CardContent } from '~/shared/components/ui/card'
-import { Checkbox }          from '~/shared/components/ui/checkbox'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,7 +21,6 @@ import {
   DropdownMenuTrigger,
 } from '~/shared/components/ui/dropdown-menu'
 import { Form, FormField } from '~/shared/components/ui/form'
-import { cn }              from '~/shared/utils'
 
 export const Route = createFileRoute('/_authenticated/dashboard')({
   component: Page,
@@ -142,29 +140,11 @@ function Page() {
             {pipe(
               tasks,
               A.map(task => (
-                <div
+                <React.Fragment
                   key={task.id}
-                  className="bg-muted hover:bg-muted/50 flex items-center justify-between rounded-md px-4 py-2"
                 >
-                  <div className="flex items-center space-x-2">
-                    <Checkbox checked={task.status === 상수_할일상태.완료} />
-                    <span
-                      className={cn('text-sm', {
-                        'text-muted-foreground line-through': task.status === 상수_할일상태.완료,
-                      })}
-                    >
-                      {task.title}
-                    </span>
-                  </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-muted-foreground hover:text-primary hover:bg-transparent"
-                  >
-                    <LuTrash />
-                    <span className="sr-only">Delete</span>
-                  </Button>
-                </div>
+                  <TaskItem {...task} />
+                </React.Fragment>
               ))
             )}
           </div>
