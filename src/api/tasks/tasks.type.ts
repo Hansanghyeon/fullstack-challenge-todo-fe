@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 import {
   getResTasksDto,
-  getPayloadTasksDto,
+  getParameterTasksDto,
   postResTasksDto,
   postPayloadTasksDto,
   postPayloadTasksRdo,
@@ -15,7 +15,7 @@ export type TTaskDto = z.infer<typeof taskDto>
  * get tasks
  */
 export type TGetResTasksDto = z.infer<typeof getResTasksDto>
-export type TGetPayloadTasksDto = z.infer<typeof getPayloadTasksDto>
+export type TGetPayloadTasksDto = z.infer<typeof getParameterTasksDto>
 
 /**
  * post tasks

@@ -1,12 +1,10 @@
-
-
 import { z }       from 'zod'
 
 import { 상수_할일상태 } from '../@x/할일상태'
 
 export const primitiveTaskDto = z.object({
   title: z.string().min(2),
-  description: z.string(),
+  description: z.string().nullish(),
 })
 
 export const taskDto = primitiveTaskDto.extend({
@@ -15,7 +13,7 @@ export const taskDto = primitiveTaskDto.extend({
 })
 
 export const getResTasksDto = z.array(taskDto)
-export const getPayloadTasksDto = z.any()
+export const getParameterTasksDto = z.any()
 
 export const postResTasksDto = z.any()
 export const postPayloadTasksDto = primitiveTaskDto

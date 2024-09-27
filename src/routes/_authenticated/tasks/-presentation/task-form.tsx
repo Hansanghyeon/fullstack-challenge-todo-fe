@@ -59,7 +59,8 @@ export function TaskForm() {
                 <input
                   placeholder="설명"
                   className="w-full border-none focus:outline-none focus:ring-0"
-                  {...field}
+                  value={field.value || ''}
+                  onChange={field.onChange}
                 />
               )}
             />
