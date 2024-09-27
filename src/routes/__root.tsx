@@ -11,9 +11,11 @@ import { AuthManager } from '~/shared/managers/auth'
 
 function App() {
   return (
-    <main className="mt-[var(--gnb-h)] pt-[var(--head-area)]">
+    <main className="mt-[var(--gnb-h)] grid min-h-[calc(100dvh-var(--gnb-h,0))] grid-rows-[1fr,auto] gap-y-[var(--space)] pt-[var(--head-area)]">
       <GNB />
-      <Outlet />
+      <div>
+        <Outlet />
+      </div>
       <FNB />
     </main>
   )

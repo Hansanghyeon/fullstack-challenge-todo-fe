@@ -17,11 +17,6 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-main {
-  @apply grid grid-rows-[1fr,auto] gap-y-[var(--space)];
-  min-height: calc(100dvh - var(--gnb-h, 0));
-}
-
 body[data-scroll-locked][data-scroll-locked] {
   --removed-body-scroll-bar-size: var(--tw-mac-scrollbar-size-w);
   margin-right: var(--removed-body-scroll-bar-size) !important;
