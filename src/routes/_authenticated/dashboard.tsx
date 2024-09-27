@@ -29,7 +29,7 @@ function Page() {
       <div className="flex justify-center">
         <TaskForm />
       </div>
-      <div className="container mx-auto mt-10">
+      <div className="container mx-auto mt-10 max-w-md">
         <div className="space-y-4">
           <div>
             <div className="flex items-center justify-between">
