@@ -16,7 +16,7 @@ export function TaskList() {
       tasks,
       A.map(task => (
         <li key={task.id}>
-          <TaskItem {...task} />
+          <TaskItem taskId={task.id} />
         </li>
       ))
     )}
