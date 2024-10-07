@@ -7,15 +7,24 @@ import {
   postPayloadTasksDto,
   postPayloadTasksRdo,
   deleteResTasksDto,
-  taskDto
+  patchResTasksDto,
+  patchPayloadTasksDto,
+  patchPayloadTasksRdo,
+  getResTaskDto,
+  getParameterTaskDto,
 } from '.'
 
-export type TTaskDto = z.infer<typeof taskDto>
 /**
  * get tasks
  */
 export type TGetResTasksDto = z.infer<typeof getResTasksDto>
 export type TGetPayloadTasksDto = z.infer<typeof getParameterTasksDto>
+
+/**
+ * get task
+ */
+export type TGetResTaskDto = z.infer<typeof getResTaskDto>
+export type TGetPayloadTaskDto = z.infer<typeof getParameterTaskDto>
 
 /**
  * post tasks
@@ -28,3 +37,10 @@ export type TPostPayloadTasksRdo = z.infer<typeof postPayloadTasksRdo>
  * delete tasks
  */
 export type TDeleteResTasksDto = z.infer<typeof deleteResTasksDto>
+
+/**
+ * patch tasks
+ */
+export type TPatchResTasksDto = z.infer<typeof patchResTasksDto>
+export type TPatchPayloadTasksDto = z.infer<typeof patchPayloadTasksDto>
+export type TPatchPayloadTasksRdo = z.infer<typeof patchPayloadTasksRdo>
